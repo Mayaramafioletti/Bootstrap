@@ -16,51 +16,55 @@
       width: 50px;
       height: 50px;
     }
+    html {
+          scroll-behavior: smooth;
+        }
   </style>
   
 </head>
 
 <body class="bg-info">
   <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark  ml-2 bg-warning">
-    <!-- Só uma imagem -->
-    <nav>
-      <a class="navbar-brand ml-2" href="#">
-        <img src="assets/img/logo.png" width="90" height="80" alt="" >
-      </a>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar">
+      <span class="navbar-brand mb-0 h1">AboutYou</span>
     </nav>
-
-    <div class="collapse navbar-collapse p-2" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center sticky-top" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link p-2" href="#campoFormulario">Formulário<span class="sr-only">(Página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link p-2" href="#estudos">Estudos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link p-2" href="#video">Vídeos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link p-2" href="#campoFormulario">Converse</a>
+          </li>
+    </ul>
+    </div>
+    <div class="justify-content-end">
+      <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contatos
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Ação</a>
-            <a class="dropdown-item" href="#">Outra ação</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Algo mais aqui</a>
+          <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="https://www.linkedin.com/in/mayara-mafioletti/" target="_blank">LinkedIn</a>
+            <a class="dropdown-item" href="https://github.com/Mayaramafioletti" target="_blank">GitHub</a>
+            <a class="dropdown-item" href="https://www.instagram.com/" target="_blank">Instagram</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Desativado</a>
-        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0 ">
-        <input class="form-control mr-sm-2 " type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0 btn btn-outline-light" type="submit">Pesquisar</button>
-      </form>
     </div>
   </nav>
-  <!-- /NavBar -->
+    
+  <!-- /NavBar-->
 
    <!-- Carosel -->
    <div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
@@ -92,7 +96,7 @@
    <!-- /Carosel -->
 
    <!-- formulario -->
-   <form class="container mb-5 mt-5 p-1">
+   <form class="container mb-5 mt-5 p-1" id="campoFormulario">
     <div class="form-group text-light">
       <label for="exampleFormControlInput1">Endereço de email (não obrigatório)</label>
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
@@ -115,7 +119,7 @@
     <!-- /formulario -->
 
    <!-- Card -->
-   <div class="container">
+   <div class="container" id="estudos">
     <div class="card-group">
       <div class="card p-2">
         <img class="card-img-top" src="assets/img/seguranca.png" alt="Imagem de capa do card">
@@ -154,13 +158,24 @@
    </div> 
    <!-- /Card -->
 
+   <!--Vídeo-->
+   <div class="container" id="video">
+     <h3 class="d-flex justify-content-center mt-5 text-light" id="video"> Vídeos </h3>
+   </div>
+   <div class="container mt-5 d-flex justify-content-sm-between">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hPR8cHL6oaM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="ml-5" width="560" height="315" src="https://www.youtube.com/embed/Yz6XywJRLaw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+   <!--/Vídeo-->
+
      <!--Rodapé-->
      <hr>
      <footer>
  
        <div class="row mb-2">
          <div class="col-md-12 d-flex justify-content-center">      
-             <a href="https://www.linkedin.com/" target="_blank" class="p-2">
+             <a href="https://www.linkedin.com/in/mayara-mafioletti/" target="_blank" class="p-2">
                <img class="tm-social" src="assets/img/Link.png" alt="Logo do Linkedin">
              </a>
        
